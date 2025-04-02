@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import { Menu, X, Headset } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ContactDialog } from '@/components/ContactDialog';
+import Logo from '@/components/Logo';
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

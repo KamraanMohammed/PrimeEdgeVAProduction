@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Calendar, BarChart, Shield, Clock } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -13,7 +12,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <BarChart className="h-6 w-6 text-primary" />,
       title: "Lower Costs",
-      description: "We don't charge a hiring fee and our international talent allows you to save more than half the cost."
+      description: "Unlock Amazon growth! $500 setup includes account, PPC, & bookkeeping. FREE 2-week trial. Just $5/hour to continue."
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
@@ -23,7 +22,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <Clock className="h-6 w-6 text-primary" />,
       title: "Cancel at Any Time",
-      description: "Hire a remote team member, pay month-to-month, and cancel anytime."
+      description: "Hire a remote team member, pay week-to-week, and cancel anytime."
     }
   ];
 
@@ -35,15 +34,17 @@ const BenefitsSection: React.FC = () => {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div className="h-12 w-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                 {benefit.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-              <p className="text-gray-600 mb-6">{benefit.description}</p>
-              <Button variant="default" className="w-full bg-primary/10 text-primary hover:bg-primary/20 border-0">
-                Get Started
-              </Button>
+              <p className="text-gray-600 flex-grow">{benefit.description}</p>
+              <div className="mt-6">
+                <Button variant="default" className="w-full bg-primary/10 text-primary hover:bg-primary/20 border-0">
+                  Get Started
+                </Button>
+              </div>
             </div>
           ))}
         </div>

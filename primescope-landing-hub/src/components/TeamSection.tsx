@@ -66,20 +66,36 @@ const TeamSection: React.FC = () => {
       videoId: "KVx1gjyT3oU" // Rhea's intro video
     },
     {
-      name: "Lisa M.",
-      role: "Bookkeeping Manager",
-      image: "/lovable-uploads/lisa-profile.jpg",
+      name: "Michael T.",
+      role: "Marketplace Analytics Manager",
+      image: "/lovable-uploads/946cdd14-8953-4c46-a557-b533c8a644c5.png",
       description: "Eight years in marketplace analytics, skilled in data analysis and performance optimization.",
       previousCompany: "Walmart Marketplace",
-      videoId: "7cNfs85pmss" // Lisa's intro video
+      videoId: "dQw4w9WgXcQ" // Sample YouTube video ID
     },
     {
       name: "Clydeh L.",
       role: "Amazon Account Manager",
-      image: "/lovable-uploads/clydeh-profile.jpg",
+      image: "/lovable-uploads/b746593f-d530-472a-a913-8883f1fcb13f.png",
       description: "Seven years managing customer communications and improving satisfaction ratings.",
       previousCompany: "Amazon Marketplace",
-      videoId: "7-u_s_2184I" // Sarah's intro video
+      videoId: "dQw4w9WgXcQ" // Sample YouTube video ID
+    },
+    {
+      name: "David K.",
+      role: "Operations Specialist",
+      image: "/lovable-uploads/946cdd14-8953-4c46-a557-b533c8a644c5.png",
+      description: "Ten years experience streamlining business operations and implementing efficient systems.",
+      previousCompany: "Walmart Marketplace",
+      videoId: "dQw4w9WgXcQ" // Sample YouTube video ID
+    },
+    {
+      name: "Emma J.",
+      role: "Content Strategist",
+      image: "/lovable-uploads/b746593f-d530-472a-a913-8883f1fcb13f.png",
+      description: "Six years creating compelling product descriptions and marketing materials for e-commerce.",
+      previousCompany: "Amazon Marketplace",
+      videoId: "dQw4w9WgXcQ" // Sample YouTube video ID
     }
   ];
 
@@ -105,7 +121,7 @@ const TeamSection: React.FC = () => {
         <div className="relative">
           <div 
             ref={teamScrollRef} 
-            className="flex gap-8 overflow-x-auto pb-8 scrollbar-none snap-x snap-mandatory scroll-smooth justify-center"
+            className="flex gap-8 overflow-x-auto pb-8 scrollbar-none snap-x snap-mandatory scroll-smooth"
             style={{ 
               WebkitOverflowScrolling: 'touch',
               scrollbarWidth: 'none',
@@ -113,7 +129,7 @@ const TeamSection: React.FC = () => {
             }}
           >
             {teamMembers.map((member, index) => (
-              <div key={index} className="flex-shrink-0 w-full sm:w-[400px] snap-center">
+              <div key={index} className="flex-shrink-0 w-full md:w-1/3 lg:w-1/4 snap-center">
                 <div className="bg-white rounded-xl shadow-sm overflow-hidden h-full relative">
                   <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1.5 rounded-full text-sm font-medium shadow-lg">
                     from $16/hr

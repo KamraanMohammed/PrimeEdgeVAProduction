@@ -12,13 +12,13 @@ const HowItWorksSection: React.FC = () => {
       number: "1",
       title: "Get Started:",
       description: "Hop on a discovery call with our team so we can assess what you need.",
-      image: "/lovable-uploads/discovery-call.png"
+      image: "/lovable-uploads/discover-call.png"
     },
     {
       number: "2",
       title: "Review Candidates:",
       description: "We'll match you with pre-vetted talent that fits your requirements.",
-      image: "/lovable-uploads/review-canidates.png"
+      image: "/lovable-uploads/e5d19d9f-8ceb-4174-9b06-917e5532175b.png"
     },
     {
       number: "3",
