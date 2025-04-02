@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Star, Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@/components/ui/avatar";
+import CalendlyDialog from './CalendlyDialog';
 import {
   Dialog,
   DialogContent,
@@ -40,46 +41,30 @@ const VideoDialog = ({ videoId }: { videoId: string }) => {
 };
 
 const TeamSection: React.FC = () => {
-  const teamScrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const scrollInterval = setInterval(() => {
-      if (teamScrollRef.current) {
-        if (teamScrollRef.current.scrollLeft + teamScrollRef.current.clientWidth >= teamScrollRef.current.scrollWidth) {
-          teamScrollRef.current.scrollLeft = 0;
-        } else {
-          teamScrollRef.current.scrollLeft += 2;
-        }
-      }
-    }, 50);
-
-    return () => clearInterval(scrollInterval);
-  }, []);
-
   const teamMembers = [
     {
       name: "Rhea D.",
       role: "Amazon Product Research",
       image: "/lovable-uploads/rhea-profile.png",
-      description: "Five years experience optimizing Amazon product listings for maximum visibility and conversion rates.",
+      description: "Five years experience in Amazon product optimization and marketplace analytics.",
       previousCompany: "Amazon Marketplace",
-      videoId: "KVx1gjyT3oU" // Rhea's intro video
+      videoId: "KVx1gjyT3oU"
     },
     {
       name: "Lisa M.",
       role: "Bookkeeping Manager",
       image: "/lovable-uploads/lisa-profile.jpg",
-      description: "Eight years in marketplace analytics, skilled in data analysis and performance optimization.",
+      description: "Eight years experience in financial analytics and data management.",
       previousCompany: "Walmart Marketplace",
-      videoId: "7cNfs85pmss" // Lisa's intro video
+      videoId: "7cNfs85pmss"
     },
     {
       name: "Clydeh L.",
       role: "Amazon Account Manager",
       image: "/lovable-uploads/clydeh-profile.jpg",
-      description: "Seven years managing customer communications and improving satisfaction ratings.",
+      description: "Seven years experience in customer success and account management.",
       previousCompany: "Amazon Marketplace",
-      videoId: "7-u_s_2184I" // Sarah's intro video
+      videoId: "7-u_s_2184I"
     }
   ];
 
@@ -96,58 +81,51 @@ const TeamSection: React.FC = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-gray-50 overflow-hidden">
+    <section id="team" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
           Meet Your Future Team Members
         </h2>
         
-        <div className="relative">
-          <div 
-            ref={teamScrollRef} 
-            className="flex gap-8 overflow-x-auto pb-8 scrollbar-none snap-x snap-mandatory scroll-smooth justify-center"
-            style={{ 
-              WebkitOverflowScrolling: 'touch',
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none'
-            }}
-          >
-            {teamMembers.map((member, index) => (
-              <div key={index} className="flex-shrink-0 w-full sm:w-[400px] snap-center">
-                <div className="bg-white rounded-xl shadow-sm overflow-hidden h-full relative">
-                  <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1.5 rounded-full text-sm font-medium shadow-lg">
-                    from $16/hr
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="w-full">
+              <div className="bg-white rounded-xl shadow-sm h-full flex flex-col relative">
+                <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1.5 rounded-full text-sm font-medium shadow-lg">
+                  from $16/hr
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="relative mx-auto w-32 h-32 mb-6">
+                    <Avatar className="w-32 h-32 rounded-full overflow-hidden">
+                      <img 
+                        src={member.image} 
+                        alt={member.name} 
+                        className="w-full h-full object-cover"
+                      />
+                    </Avatar>
                   </div>
-                  <div className="p-6 text-center">
-                    <div className="relative mx-auto w-32 h-32 mb-4">
-                      <Avatar className="w-32 h-32 rounded-full overflow-hidden">
-                        <img 
-                          src={member.image} 
-                          alt={member.name} 
-                          className="w-full h-full object-cover rounded-full"
-                        />
-                      </Avatar>
-                    </div>
-                    <h3 className="text-xl font-bold">{member.name}</h3>
-                    <p className="text-primary font-medium">{member.role}</p>
-                    <p className="mt-4 text-gray-600">{member.description}</p>
-                    
-                    <div className="mt-6 flex justify-center gap-2">
+                  <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+                  <p className="text-primary font-medium mb-4">{member.role}</p>
+                  <p className="text-gray-600 mb-6">{member.description}</p>
+                  
+                  <div className="mt-auto space-y-6">
+                    <div className="flex justify-center gap-2">
                       <VideoDialog videoId={member.videoId} />
-                      <Button className="flex-1">
-                        Start Trial
-                      </Button>
+                      <CalendlyDialog 
+                        buttonText="Start Trial"
+                        className="flex-1 bg-primary text-white hover:bg-primary/90"
+                      />
                     </div>
                     
-                    <div className="mt-6 pt-4 border-t flex items-center justify-center">
+                    <div className="pt-4 border-t flex items-center justify-center">
                       <span className="text-gray-500 mr-2">Experience in:</span>
                       <span className="font-semibold">{member.previousCompany}</span>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
         
         <div className="mt-12 overflow-hidden relative">

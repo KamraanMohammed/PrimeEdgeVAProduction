@@ -18,13 +18,13 @@ const HowItWorksSection: React.FC = () => {
       number: "2",
       title: "Review Candidates:",
       description: "We'll match you with pre-vetted talent that fits your requirements.",
-      image: "/lovable-uploads/e5d19d9f-8ceb-4174-9b06-917e5532175b.png"
+      image: "/lovable-uploads/review-canidates.png"
     },
     {
       number: "3",
       title: "Start Trial:",
       description: "Begin with a one-week trial to ensure it's the perfect match.",
-      image: "/lovable-uploads/c02279ee-14dc-4be2-bce4-65dfed7caba4.png"
+      image: "/lovable-uploads/start-trail.png"
     },
     {
       number: "4",

@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import CalendlyDialog from './CalendlyDialog';
 
 const PricingSection = () => {
   return (
@@ -52,9 +51,12 @@ const PricingSection = () => {
                 ))}
               </ul>
               
-              <Button className="w-full mt-8 bg-primary hover:bg-primary-dark text-white">
-                Get Started
-              </Button>
+              <div className="mt-8">
+                <CalendlyDialog 
+                  buttonText="Get Started"
+                  className="w-full bg-primary hover:bg-primary-dark text-white"
+                />
+              </div>
             </div>
           </div>
           
@@ -98,9 +100,12 @@ const PricingSection = () => {
                 ))}
               </ul>
               
-              <Button className="w-full mt-8 bg-primary hover:bg-primary-dark text-white">
-                Get Started
-              </Button>
+              <div className="mt-8">
+                <CalendlyDialog 
+                  buttonText="Get Started"
+                  className="w-full bg-primary hover:bg-primary-dark text-white"
+                />
+              </div>
             </div>
           </div>
           
@@ -141,9 +146,12 @@ const PricingSection = () => {
                 ))}
               </ul>
               
-              <Button className="w-full mt-8 bg-primary hover:bg-primary-dark text-white">
-                Get Started
-              </Button>
+              <div className="mt-8">
+                <CalendlyDialog 
+                  buttonText="Get Started"
+                  className="w-full bg-primary hover:bg-primary-dark text-white"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -3,13 +3,10 @@ import { Menu, X, Headset } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ContactDialog } from '@/components/ContactDialog';
 import Logo from '@/components/Logo';
+import CalendlyDialog from './CalendlyDialog';
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
 
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
@@ -22,54 +19,57 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center gap-8">
           <a href="#benefits" className="text-gray-600 hover:text-primary transition-colors">Benefits</a>
           <a href="#how-it-works" className="text-gray-600 hover:text-primary transition-colors">How It Works</a>
-          <a href="#pricing" className="text-gray-600 hover:text-primary transition-colors">Pricing</a>
           <a href="#team" className="text-gray-600 hover:text-primary transition-colors">Our Team</a>
-          <ContactDialog />
+          <a href="#pricing" className="text-gray-600 hover:text-primary transition-colors">Pricing</a>
+          <CalendlyDialog />
         </div>
-        
+
         <div className="md:hidden">
-          <button 
-            onClick={toggleMobileMenu}
-            className="p-2 text-gray-600 focus:outline-none"
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-gray-600 hover:text-gray-900 focus:outline-none"
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
-      
+
+      {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b py-4 px-4 animate-fade-in">
-          <div className="flex flex-col gap-4">
-            <a 
-              href="#benefits" 
-              className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Benefits
-            </a>
-            <a 
-              href="#how-it-works" 
-              className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              How It Works
-            </a>
-            <a 
-              href="#pricing" 
-              className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Pricing
-            </a>
-            <a 
-              href="#team" 
-              className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Our Team
-            </a>
-            <div className="py-2 px-4">
-              <ContactDialog />
+        <div className="md:hidden bg-white border-t">
+          <div className="container mx-auto px-4 py-2">
+            <div className="flex flex-col">
+              <a 
+                href="#benefits" 
+                className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Benefits
+              </a>
+              <a 
+                href="#how-it-works" 
+                className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                How It Works
+              </a>
+              <a 
+                href="#team" 
+                className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Our Team
+              </a>
+              <a 
+                href="#pricing" 
+                className="text-gray-600 hover:text-primary transition-colors py-2 px-4 rounded-md"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </a>
+              <div className="py-2 px-4">
+                <CalendlyDialog />
+              </div>
             </div>
           </div>
         </div>

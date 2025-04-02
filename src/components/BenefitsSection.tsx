@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, BarChart, Shield, Clock } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import CalendlyDialog from './CalendlyDialog';
 
 const BenefitsSection: React.FC = () => {
   const benefits = [
@@ -41,9 +41,10 @@ const BenefitsSection: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
               <p className="text-gray-600 flex-grow">{benefit.description}</p>
               <div className="mt-6">
-                <Button variant="default" className="w-full bg-primary/10 text-primary hover:bg-primary/20 border-0">
-                  Get Started
-                </Button>
+                <CalendlyDialog 
+                  buttonText="Get Started"
+                  className="w-full bg-primary/10 text-primary hover:bg-primary/20 border-0"
+                />
               </div>
             </div>
           ))}

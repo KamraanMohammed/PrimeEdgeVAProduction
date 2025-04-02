@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import CalendlyDialog from './CalendlyDialog';
 
 const HowItWorksSection: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -24,7 +25,7 @@ const HowItWorksSection: React.FC = () => {
       number: "3",
       title: "Start Trial:",
       description: "Begin with a one-week trial to ensure it's the perfect match.",
-      image: "/lovable-uploads/c02279ee-14dc-4be2-bce4-65dfed7caba4.png"
+      image: "/lovable-uploads/start-trail.png"
     },
     {
       number: "4",
@@ -107,9 +108,10 @@ const HowItWorksSection: React.FC = () => {
                   }`}>{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                   {activeStep === index && (
-                    <Button className="mt-4 animate-fade-in">
-                      Get Started
-                    </Button>
+                    <CalendlyDialog 
+                      buttonText="Get Started"
+                      className="mt-4 animate-fade-in"
+                    />
                   )}
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import CalendlyDialog from './CalendlyDialog';
 import OrangeDotsBg from '@/components/OrangeDotsBg';
 
 const HeroSection: React.FC = () => {
@@ -24,10 +24,10 @@ const HeroSection: React.FC = () => {
           <p className="text-lg text-gray-700">Hire remote, pay week-to-week, for 1/4 the cost</p>
         </div>
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center animate-fade-up">
-          <Button size="lg" className="bg-primary hover:bg-primary-dark">
-            Get Started
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <CalendlyDialog 
+            buttonText="Get Started"
+            className="bg-primary hover:bg-primary-dark text-white"
+          />
         </div>
       </div>
     </section>

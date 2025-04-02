@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import CalendlyDialog from './CalendlyDialog';
 
 const CTASection: React.FC = () => {
   return (
@@ -13,10 +12,10 @@ const CTASection: React.FC = () => {
         <p className="text-white/80 mb-10 max-w-2xl mx-auto">
           Join successful marketplace sellers who trust PrimeEdgeVA for their business growth
         </p>
-        <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-          Get Started Now
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <CalendlyDialog 
+          buttonText="Get Started Now"
+          className="bg-white text-primary hover:bg-gray-100"
+        />
       </div>
     </section>
   );
