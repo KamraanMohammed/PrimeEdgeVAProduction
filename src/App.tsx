@@ -5,7 +5,7 @@ import ThankYou from "@/pages/thank-you";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
-import { Sonner } from "@/components/ui/sonner";
+import { Toaster as Sonner } from "@/components/ui/sonner";
 
 const queryClient = new QueryClient();
 
