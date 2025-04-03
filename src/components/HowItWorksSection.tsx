@@ -31,13 +31,13 @@ const HowItWorksSection: React.FC = () => {
       number: "4",
       title: "Subscribe to a Plan:",
       description: "Choose a flexible monthly plan that works for your business.",
-      image: "/lovable-uploads/e5d19d9f-8ceb-4174-9b06-917e5532175b.png"
+      image: "/lovable-uploads/sub.png"
     },
     {
       number: "5",
       title: "100% Satisfaction Guarantee:",
       description: "We ensure you're completely happy with your virtual assistant.",
-      image: "/lovable-uploads/c02279ee-14dc-4be2-bce4-65dfed7caba4.png"
+      image: "/lovable-uploads/5star.png"
     }
   ];
 
