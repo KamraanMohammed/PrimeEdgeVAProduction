@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Headset } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { ContactDialog } from '@/components/ContactDialog';
-import Logo from '@/components/Logo';
+import { Button } from '@/components/ui/button';
+import { ContactForm } from "./ContactForm";
 import CalendlyDialog from './CalendlyDialog';
 
 const Navbar: React.FC = () => {
@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
           <a href="#how-it-works" className="text-gray-600 hover:text-primary transition-colors">How It Works</a>
           <a href="#team" className="text-gray-600 hover:text-primary transition-colors">Our Team</a>
           <a href="#pricing" className="text-gray-600 hover:text-primary transition-colors">Pricing</a>
+          <ContactForm />
           <CalendlyDialog />
         </div>
 
@@ -67,6 +68,9 @@ const Navbar: React.FC = () => {
               >
                 Pricing
               </a>
+              <div className="py-2 px-4">
+                <ContactForm />
+              </div>
               <div className="py-2 px-4">
                 <CalendlyDialog />
               </div>
