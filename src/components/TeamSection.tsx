@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Star, Play } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@/components/ui/avatar";
+import { ContactForm } from '@/components/ContactForm';
 import CalendlyDialog from './CalendlyDialog';
 import {
   Dialog,
@@ -45,6 +46,7 @@ const TeamSection: React.FC = () => {
     {
       name: "Rhea D.",
       role: "Amazon Product Research",
+      price: "$5/h",
       image: "/lovable-uploads/rhea-profile.png",
       description: "Five years experience in Amazon product optimization and marketplace analytics.",
       previousCompany: "Amazon Marketplace",
@@ -53,6 +55,7 @@ const TeamSection: React.FC = () => {
     {
       name: "Lisa M.",
       role: "Bookkeeping Manager",
+      price: "$5/h",
       image: "/lovable-uploads/lisa-profile.jpg",
       description: "Eight years experience in financial analytics and data management.",
       previousCompany: "Walmart Marketplace",
@@ -61,6 +64,7 @@ const TeamSection: React.FC = () => {
     {
       name: "Clydeh L.",
       role: "Amazon Account Manager",
+      price: "$6/h",
       image: "/lovable-uploads/clydeh-profile.jpg",
       description: "Seven years experience in customer success and account management.",
       previousCompany: "Amazon Marketplace",
@@ -92,7 +96,7 @@ const TeamSection: React.FC = () => {
             <div key={index} className="w-full">
               <div className="bg-white rounded-xl shadow-sm h-full flex flex-col relative">
                 <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1.5 rounded-full text-sm font-medium shadow-lg">
-                  from $16/hr
+                  {member.price}
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="relative mx-auto w-32 h-32 mb-6">

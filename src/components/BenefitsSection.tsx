@@ -12,7 +12,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <BarChart className="h-6 w-6 text-primary" />,
       title: "Lower Costs",
-      description: "Unlock Amazon growth! $500 setup includes account, PPC, & bookkeeping. FREE 2-week trial. Just $5/hour to continue."
+      description: "Account Management $6/h, Bookkeeping $5/h, Amazon Product Research $5/h. FREE 1-week trial!"
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
