@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Menu, X, Headset } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ContactForm } from "./ContactForm";
-import CalendlyDialog from './CalendlyDialog';
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +21,6 @@ const Navbar: React.FC = () => {
           <a href="#team" className="text-gray-600 hover:text-primary transition-colors">Our Team</a>
           <a href="#pricing" className="text-gray-600 hover:text-primary transition-colors">Pricing</a>
           <ContactForm />
-          <CalendlyDialog />
         </div>
 
         <div className="md:hidden">
@@ -70,9 +68,6 @@ const Navbar: React.FC = () => {
               </a>
               <div className="py-2 px-4">
                 <ContactForm />
-              </div>
-              <div className="py-2 px-4">
-                <CalendlyDialog />
               </div>
             </div>
           </div>
