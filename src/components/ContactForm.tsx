@@ -36,7 +36,7 @@ export function ContactForm({ buttonClassName, buttonText = "Contact Us" }: Cont
     };
 
     try {
-      await fetch('https://formsubmit.co/ajax/shoveb1@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/primescopevirtual@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
