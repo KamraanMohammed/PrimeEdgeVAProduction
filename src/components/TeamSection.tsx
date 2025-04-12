@@ -55,16 +55,16 @@ const TeamSection: React.FC = () => {
     {
       name: "Lisa M.",
       role: "Bookkeeping Manager",
-      price: "$5/h",
+      price: "$6/h",
       image: "/lovable-uploads/lisa-profile.jpg",
       description: "Eight years experience in financial analytics and data management.",
       previousCompany: "Walmart Marketplace",
       videoId: "7cNfs85pmss"
     },
     {
-      name: "Clydeh L.",
+      name: "Clyde L.",
       role: "Amazon Account Manager",
-      price: "$6/h",
+      price: "$8/h",
       image: "/lovable-uploads/clydeh-profile.jpg",
       description: "Seven years experience in customer success and account management.",
       previousCompany: "Amazon Marketplace",
