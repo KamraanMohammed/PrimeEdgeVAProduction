@@ -6,6 +6,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import SuccessPage from "@/pages/SuccessPage";
+import CancelPage from "@/pages/CancelPage";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/success" element={<SuccessPage />} />
+            <Route path="/cancel" element={<CancelPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
