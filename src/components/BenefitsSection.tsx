@@ -1,18 +1,18 @@
 import React from 'react';
 import { Calendar, BarChart, Shield, Clock } from 'lucide-react';
-import CalendlyDialog from './CalendlyDialog';
+import { Button } from '@/components/ui/button';
 
 const BenefitsSection: React.FC = () => {
   const benefits = [
     {
       icon: <Calendar className="h-6 w-6 text-primary" />,
-      title: "Hire in 2 Weeks",
-      description: "Your talent starts with a one-week trial and is ready to join in just two weeks."
+      title: "Free 2 Weeks",
+      description: "After subscribing for a service, your first 2 weeks are free! Your talent is ready to join in just two weeks."
     },
     {
       icon: <BarChart className="h-6 w-6 text-primary" />,
       title: "Lower Costs",
-      description: "Account Management $6/h, Bookkeeping $5/h, Amazon Product Research $5/h. FREE 1-week trial!"
+      description: "Account Management $7/h, Bookkeeping $10/h, Amazon Product Research $5/h. FREE 2-week trial!"
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
@@ -41,10 +41,17 @@ const BenefitsSection: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
               <p className="text-gray-600 flex-grow">{benefit.description}</p>
               <div className="mt-6">
-                <CalendlyDialog 
-                  buttonText="Get Started"
+                <Button
                   className="w-full bg-primary/10 text-primary hover:bg-primary/20 border-0"
-                />
+                  onClick={() => {
+                    const el = document.getElementById('pricing');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Get Started
+                </Button>
               </div>
             </div>
           ))}

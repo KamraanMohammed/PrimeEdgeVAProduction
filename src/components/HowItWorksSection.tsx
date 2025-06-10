@@ -23,18 +23,12 @@ const HowItWorksSection: React.FC = () => {
     },
     {
       number: "3",
-      title: "Start Trial:",
-      description: "Begin with a one-week trial to ensure it's the perfect match.",
-      image: "/lovable-uploads/start-trail.png"
-    },
-    {
-      number: "4",
       title: "Subscribe to a Plan:",
       description: "Choose a flexible monthly plan that works for your business.",
       image: "/lovable-uploads/sub.png"
     },
     {
-      number: "5",
+      number: "4",
       title: "100% Satisfaction Guarantee:",
       description: "We ensure you're completely happy with your virtual assistant.",
       image: "/lovable-uploads/5star.png"
@@ -108,10 +102,17 @@ const HowItWorksSection: React.FC = () => {
                   }`}>{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                   {activeStep === index && (
-                    <CalendlyDialog 
-                      buttonText="Get Started"
+                    <Button
                       className="mt-4 animate-fade-in"
-                    />
+                      onClick={() => {
+                        const el = document.getElementById('pricing');
+                        if (el) {
+                          el.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
+                      Get Started
+                    </Button>
                   )}
                 </div>
               </div>
@@ -121,10 +122,10 @@ const HowItWorksSection: React.FC = () => {
           {/* Middle - Connecting dots */}
           <div className="hidden md:flex md:col-span-1 items-start justify-center sticky top-20" style={{ height: '400px' }}>
             <div className="flex flex-col items-center space-y-2 h-full justify-center">
-              {[0,1,2,3,4].map((_, i) => (
+              {[0,1,2,3].map((_, i) => (
                 <React.Fragment key={i}>
                   <div className={`w-3 h-3 rounded-full transition-colors duration-500 ${activeStep >= i ? 'bg-primary' : 'bg-gray-300'}`}></div>
-                  {i < 4 && <div className={`w-0.5 h-20 transition-colors duration-500 ${activeStep >= i ? 'bg-primary' : 'bg-gray-300'}`}></div>}
+                  {i < 3 && <div className={`w-0.5 h-20 transition-colors duration-500 ${activeStep >= i ? 'bg-primary' : 'bg-gray-300'}`}></div>}
                 </React.Fragment>
               ))}
             </div>

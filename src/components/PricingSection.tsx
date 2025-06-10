@@ -1,6 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
-import CalendlyDialog from './CalendlyDialog';
+import StripePaymentDialog from './StripePaymentDialog';
 
 const PricingSection = () => {
   return (
@@ -17,7 +17,7 @@ const PricingSection = () => {
           {/* Starter Plan */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Starter</h3>
+              <h3 className="text-2xl font-bold mb-4">Product Research</h3>
               <p className="text-gray-700 mb-4">
                 Great English, Neutral Accent, Remote Work Experience, High Potential
               </p>
@@ -29,6 +29,12 @@ const PricingSection = () => {
                 <span className="text-6xl font-bold ml-2">$5</span>
                 <span className="text-xl ml-1">/ hour</span>
               </div>
+              <div className="mt-4 text-sm space-y-1">
+                <div><b>Initial payment:</b> $235 ($117.50 upfront to begin).</div>
+                <div><b>Weeks 1 & 2:</b> Free service.</div>
+                <div><b>Week 3:</b> $96/week (24hr part-time) or $160/week (40hr full-time), continuing until canceled.</div>
+                <div><b>Week 4:</b> Weekly rate + remaining $117.50 initial fee.</div>
+              </div>
             </div>
             
             <div className="p-8">
@@ -37,12 +43,12 @@ const PricingSection = () => {
               
               <ul className="space-y-3">
                 {[
-                  "Calendar and email management",
+                  "Market research",
                   "Data entry and file management",
                   "Travel planning and booking",
-                  "Content posting and scheduling",
-                  "Basic social media management",
-                  "Simple analytics tracking"
+                  "Supplier research",
+                  "Keyword and SEO research",
+                  "Social media research"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
@@ -52,9 +58,12 @@ const PricingSection = () => {
               </ul>
               
               <div className="mt-8">
-                <CalendlyDialog 
+                <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
+                  planId="price_1RLzEe2aGo9uNEdkG70uc0wf"
+                  planName="Product Research"
+                  amount={5}
                 />
               </div>
             </div>
@@ -66,7 +75,7 @@ const PricingSection = () => {
               MOST POPULAR
             </div>
             <div className="p-8 pt-12">
-              <h3 className="text-2xl font-bold mb-4">Advanced</h3>
+              <h3 className="text-2xl font-bold mb-4">Account Management</h3>
               <p className="text-gray-700 mb-4">
                 Good US Accent, Can Create Processes, Can Lead Teams, Autonomous
               </p>
@@ -78,6 +87,12 @@ const PricingSection = () => {
                 <span className="text-6xl font-bold ml-2 text-white">$7</span>
                 <span className="text-xl ml-1 text-white">/ hour</span>
               </div>
+              <div className="mt-4 text-sm text-white space-y-1">
+                <div><b>Initial payment:</b> $235 ($117.50 upfront to begin).</div>
+                <div><b>Weeks 1 & 2:</b> Free service.</div>
+                <div><b>Week 3:</b> $120/week (24hr part-time) or $200/week (40hr full-time), continuing until canceled.</div>
+                <div><b>Week 4:</b> Weekly rate + remaining $117.50 initial fee.</div>
+              </div>
             </div>
             
             <div className="p-8">
@@ -86,12 +101,12 @@ const PricingSection = () => {
               
               <ul className="space-y-3">
                 {[
-                  "Meeting agendas and minutes",
-                  "Budget tracking and reporting",
-                  "Event planning and coordination",
-                  "Client communication",
-                  "Executive and personal task support",
-                  "Content strategy and calendar planning"
+                  "Create & Upload Listings",
+                  "Optimize Listings",
+                  "Monitor Orders",
+                  "Inventory Tracking",
+                  "Respond to Buyer Messages",
+                  "Account Health Monitoring"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
@@ -101,9 +116,12 @@ const PricingSection = () => {
               </ul>
               
               <div className="mt-8">
-                <CalendlyDialog 
+                <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
+                  planId="price_123_advanced"
+                  planName="Advanced"
+                  amount={7}
                 />
               </div>
             </div>
@@ -112,7 +130,7 @@ const PricingSection = () => {
           {/* Pro Plan */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Pro</h3>
+              <h3 className="text-2xl font-bold mb-4">Bookkeeping</h3>
               <p className="text-gray-700 mb-4">
                 Perfect US Accent, Extensive Industry Experience, High-touch Client Engagement
               </p>
@@ -124,6 +142,12 @@ const PricingSection = () => {
                 <span className="text-6xl font-bold ml-2">10</span>
                 <span className="text-xl ml-1">/ hour</span>
               </div>
+              <div className="mt-4 text-sm space-y-1">
+                <div><b>Initial payment:</b> $235 ($117.50 upfront to begin).</div>
+                <div><b>Weeks 1 & 2:</b> Free service.</div>
+                <div><b>Week 3:</b> $96/week (24hr part-time) or $160/week (40hr full-time), continuing until canceled.</div>
+                <div><b>Week 4:</b> Weekly rate + remaining $117.50 initial fee.</div>
+              </div>
             </div>
             
             <div className="p-8">
@@ -132,12 +156,12 @@ const PricingSection = () => {
               
               <ul className="space-y-3">
                 {[
-                  "Manage high-level clients",
-                  "Collaborations and sponsorships",
-                  "Oversee strategic partnerships",
-                  "Coordinate networking opportunities",
-                  "Lead large-scale projects",
-                  "Facilitate core system improvements"
+                  "Record Daily Transactions",
+                  "Upload Receipts & Invoices",
+                  "Prepare Monthly Reports",
+                  "Budget Tracking",
+                  "Track Invoices",
+                  "Manage Vendor Bills"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
@@ -147,9 +171,12 @@ const PricingSection = () => {
               </ul>
               
               <div className="mt-8">
-                <CalendlyDialog 
+                <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
+                  planId="price_123_pro"
+                  planName="Pro"
+                  amount={10}
                 />
               </div>
             </div>
