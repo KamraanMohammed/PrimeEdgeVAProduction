@@ -26,7 +26,7 @@ const PricingSection = () => {
             <div className="bg-primary text-white p-8 mt-auto">
               <div className="flex items-end">
                 <span className="text-lg">from</span>
-                <span className="text-6xl font-bold ml-2">$5</span>
+                <span className="text-6xl font-bold ml-2">$4</span>
                 <span className="text-xl ml-1">/ hour</span>
               </div>
               <div className="mt-4 text-sm space-y-1">
@@ -84,7 +84,7 @@ const PricingSection = () => {
             <div className="bg-primary p-8 mt-auto">
               <div className="flex items-end">
                 <span className="text-lg text-white">from</span>
-                <span className="text-6xl font-bold ml-2 text-white">$7</span>
+                <span className="text-6xl font-bold ml-2 text-white">$5</span>
                 <span className="text-xl ml-1 text-white">/ hour</span>
               </div>
               <div className="mt-4 text-sm text-white space-y-1">
@@ -139,7 +139,7 @@ const PricingSection = () => {
             <div className="bg-primary text-white p-8 mt-auto">
               <div className="flex items-end">
                 <span className="text-lg">from</span>
-                <span className="text-6xl font-bold ml-2">10</span>
+                <span className="text-6xl font-bold ml-2">$5</span>
                 <span className="text-xl ml-1">/ hour</span>
               </div>
               <div className="mt-4 text-sm space-y-1">
