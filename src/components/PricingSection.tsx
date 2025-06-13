@@ -119,8 +119,8 @@ const PricingSection = () => {
                 <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
-                  planId="price_123_advanced"
-                  planName="Advanced"
+                  planId="price_1RZM8o2aGo9uNEdkdjEl1qmV"
+                  planName="Account Management"
                   amount={7}
                 />
               </div>
@@ -174,8 +174,8 @@ const PricingSection = () => {
                 <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
-                  planId="price_123_pro"
-                  planName="Pro"
+                  planId="price_1RZM9K2aGo9uNEdkLyLUzjf6"
+                  planName="Bookkeeping"
                   amount={10}
                 />
               </div>
