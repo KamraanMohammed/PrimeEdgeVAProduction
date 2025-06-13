@@ -61,7 +61,7 @@ const PricingSection = () => {
                 <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
-                  planId="price_1RLzEe2aGo9uNEdkG70uc0wf"
+                  planId="price_1RZhDuF0c15d7LanVOwkbwEC"
                   planName="Product Research"
                   amount={5}
                 />
@@ -119,7 +119,7 @@ const PricingSection = () => {
                 <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
-                  planId="price_1RZM8o2aGo9uNEdkdjEl1qmV"
+                  planId="price_1RZhECF0c15d7LanTQ2P4gPj"
                   planName="Account Management"
                   amount={7}
                 />
@@ -174,7 +174,7 @@ const PricingSection = () => {
                 <StripePaymentDialog 
                   buttonText="Get Started"
                   className="w-full bg-primary hover:bg-primary-dark text-white"
-                  planId="price_1RZM9K2aGo9uNEdkLyLUzjf6"
+                  planId="price_1RZhDbF0c15d7LanPQ2JoZaG"
                   planName="Bookkeeping"
                   amount={10}
                 />
